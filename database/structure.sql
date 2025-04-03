@@ -2,8 +2,7 @@ create schema product_variants_db collate utf8mb4_general_ci;
 
 create table product_variants_db.products
 (
-	product_id int auto_increment
-		primary key,
+	product_id int not null primary key,
 	product_name varchar(50) not null,
 	constraint products_product_name_uindex
 		unique (product_name)
@@ -11,8 +10,7 @@ create table product_variants_db.products
 
 create table product_variants_db.options
 (
-	option_id int auto_increment
-		primary key,
+	option_id int not null primary key,
 	option_name varchar(50) not null,
 	constraint options_option_name_uindex
 		unique (option_name)
