@@ -47,7 +47,6 @@ create table product_variants_db.product_variants
 	product_fk int not null,
 	variant_id int not null,
 	sku varchar(10) not null,
-	default tinyint(4) DEFAULT NULL,
 	constraint product_variants_pk
 		primary key (product_fk, variant_id),
     constraint product_variants_sku_uindex
